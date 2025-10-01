@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 export async function GET() {
   try {
-    const users = await prisma.user.findMany();   // 👈 singular "user"
+    const users = await prisma.user.findMany(); // 👈 singular `user` (model User ke hisaab se)
     return NextResponse.json(users);
   } catch (error) {
     console.error(error);
