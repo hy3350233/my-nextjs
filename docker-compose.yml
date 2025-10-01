@@ -16,8 +16,8 @@ services:
     restart: always
     depends_on:
       - db
-    environment:
-      DATABASE_URL: "postgresql://postgres:postgres@db:5432/mydb"
+    env_file:
+      - .env   # ✅ ab yaha se DATABASE_URL pick karega
     ports:
       - "3000:3000"
 
