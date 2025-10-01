@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:18-bullseye
 
 WORKDIR /app
 
@@ -8,10 +8,10 @@ RUN npm install
 
 COPY . .
 
-# ✅ Generate Prisma client before build
+# ✅ Generate Prisma client
 RUN npx prisma generate
 
-# ✅ Now build Next.js app
+# ✅ Build Next.js
 RUN npm run build
 
 EXPOSE 3000
