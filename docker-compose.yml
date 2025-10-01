@@ -17,9 +17,10 @@ services:
     depends_on:
       - db
     env_file:
-      - .env   # ✅ ab yaha se DATABASE_URL pick karega
+      - .env   # ✅ yaha se actual DATABASE_URL pick karega
     ports:
       - "3000:3000"
 
 volumes:
   pgdata:
+
